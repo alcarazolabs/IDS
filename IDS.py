@@ -90,7 +90,7 @@ Timer(1, thread).start()
 # define ETH_P_ALL    0x0003          /* Every packet (be careful!!!) */
 try:
     s = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.ntohs(0x0003))
-except socket.error, msg:
+except socket.error, msg: #try except socket.error as msg: if you use python 3.x
     # print 'Socket could not be created. Error Code : ' + str(msg[0]) + ' Message ' + msg[1]
     sys.exit()
 
